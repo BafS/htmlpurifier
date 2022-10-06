@@ -1852,7 +1852,7 @@ class HTML5TreeConstructer
             element. */
             foreach ($token['attr'] as $attr) {
                 if (!$this->stack[0]->hasAttribute($attr['name'])) {
-                    $this->stack[0]->setAttribute($attr['name'], $attr['value']);
+                    $this->stack[0]->setAttribute($attr['name'], (string) $attr['value']);
                 }
             }
 
